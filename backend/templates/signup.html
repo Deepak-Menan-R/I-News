@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: silver;
+            margin: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .categories,
+        .countries {
+            margin-bottom: 10px;
+        }
+        .category-label,
+        .location-label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .category-checkbox label,
+        .country-checkbox label {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .category-checkbox input,
+        .country-checkbox input {
+            margin-right: 5px;
+        }
+        button a {
+            text-decoration: none;
+            color: #fff;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            margin: 15px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+        .container::-webkit-scrollbar {
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Signup</h1>
+        <form action="/signup" method="POST" id="signup-form">
+            <input type="text" name="username" placeholder="Username" required>
+            <hr>
+            <input type="email" name="email" placeholder="Email" required>
+            <hr>
+            <input type="password" name="password" placeholder="Password" required>
+            <hr>
+            <span class="category-label">Categories:</span><br>
+            <div class="categories">
+                <div class="category-checkbox">
+                    <input type="checkbox" id="technology" name="category" value="technology">
+                    <label for="technology">Technology</label>
+                </div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="science" name="category" value="science">
+                    <label for="science">Science</label>
+                </div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="business" name="category" value="business">
+                    <label for="business">Business</label>
+                </div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="entertainment" name="category" value="entertainment">
+                    <label for="entertainment">Entertainment</label>
+                </div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="health" name="category" value="health">
+                    <label for="health">Health</label>
+                </div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="sports" name="category" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+                <div class="category-checkbox">
+                    <input type="checkbox" id="general" name="category" value="general">
+                    <label for="general">General</label>
+                </div>
+            </div>
+            <span class="location-label">Countries:</span><br>
+<div class="countries">
+    <div class="country-checkbox">
+        <input type="checkbox" id="us" name="country" value="us">
+        <label for="us">United States</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="gb" name="country" value="gb">
+        <label for="gb">United Kingdom</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="ca" name="country" value="ca">
+        <label for="ca">Canada</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="au" name="country" value="au">
+        <label for="au">Australia</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="de" name="country" value="de">
+        <label for="de">Germany</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="fr" name="country" value="fr">
+        <label for="fr">France</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="jp" name="country" value="jp">
+        <label for="jp">Japan</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="in" name="country" value="in">
+        <label for="in">India</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="it" name="country" value="it">
+        <label for="it">Italy</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="br" name="country" value="br">
+        <label for="br">Brazil</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="mx" name="country" value="mx">
+        <label for="mx">Mexico</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="ru" name="country" value="ru">
+        <label for="ru">Russia</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="kr" name="country" value="kr">
+        <label for="kr">South Korea</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="cn" name="country" value="cn">
+        <label for="cn">China</label>
+    </div>
+    <div class="country-checkbox">
+        <input type="checkbox" id="za" name="country" value="za">
+        <label for="za">South Africa</label>
+    </div>
+</div>
+
+            <button type="submit">Signup</button>
+            <button><a href="/login">Login</a></button>
+        </form>
+    </div>
+</body>
+</html>
+

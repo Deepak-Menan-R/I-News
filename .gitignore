@@ -1,0 +1,15 @@
+# Node.js (React)
+node_modules/
+*.log
+.env
+.cache
+
+# Python (Flask)
+venv/
+__pycache__/
+instance/
+*.pyc
+myenv/
+*.zip
+.env
+.DS_Store
